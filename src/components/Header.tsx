@@ -76,7 +76,7 @@ const Header = () => {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-indigo-600">Ofgeha Gelana</h1>
+        <h1 className="text-2xl font-bold text-indigo-600">Ofgeha</h1>
         <nav className="hidden md:flex space-x-8">
           <a href="#about" className="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
           <a href="#skills" className="text-gray-600 hover:text-indigo-600 transition duration-300">Skills</a>
@@ -106,3 +106,6 @@ const Header = () => {
 };
 
 export default Header;
+
+
+

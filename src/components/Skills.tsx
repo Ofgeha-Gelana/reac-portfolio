@@ -139,6 +139,63 @@
 
 
 
+// import React from 'react';
+// import { Code, Database, BarChart, Server, Wrench, Brain } from 'lucide-react';
+
+// // Skills Data
+// const skillsData = [
+//   { category: 'Programming Languages', items: ['Python', 'R', 'SQL'], icon: Code },
+//   { category: 'Machine Learning', items: ['TensorFlow', 'PyTorch', 'Scikit-learn'], icon: Brain },
+//   { category: 'Data Visualization', items: ['Matplotlib', 'Seaborn', 'Plotly'], icon: BarChart },
+//   { category: 'Big Data', items: ['Hadoop', 'Spark', 'Hive'], icon: Server },
+//   { category: 'Databases', items: ['PostgreSQL', 'MongoDB', 'Cassandra'], icon: Database },
+//   { category: 'Tools', items: ['Jupyter', 'Git', 'Docker'], icon: Wrench },
+// ];
+
+// // SkillCard Component
+// const SkillCard: React.FC<{ icon: React.ReactNode; skill: string; description: string }> = ({
+//   icon,
+//   skill,
+//   description,
+// }) => {
+//   return (
+//     <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:scale-105">
+//       <div className="flex justify-center items-center mb-4">
+//         {icon}
+//       </div>
+//       <h3 className="text-xl font-semibold mb-2">{skill}</h3>
+//       <p className="text-gray-600 dark:text-gray-300">{description}</p>
+//     </div>
+//   );
+// };
+
+// // Skills Section Component
+// const Skills: React.FC = () => {
+//   return (
+//     <section id="skills" className="mb-16">
+//       <h2 className="text-3xl font-bold mb-6 text-center">Skills</h2>
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Added max width and centering */}
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+//             {skillsData.map((skill) => (
+//             <SkillCard
+//                 key={skill.category}
+//                 icon={<skill.icon className="w-6 h-6 text-blue-500" />} // Use your color preference
+//                 skill={skill.category}
+//                 description={skill.items.join(', ')} // Combine items into a string
+//             />
+            
+//         ))}
+//       </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Skills;
+
+
+
+
 import React from 'react';
 import { Code, Database, BarChart, Server, Wrench, Brain } from 'lucide-react';
 
@@ -172,20 +229,19 @@ const SkillCard: React.FC<{ icon: React.ReactNode; skill: string; description: s
 // Skills Section Component
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="mb-16">
+    <section id="skills" className="section mb-16"> {/* Added section class */}
       <h2 className="text-3xl font-bold mb-6 text-center">Skills</h2>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Added max width and centering */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skillsData.map((skill) => (
+          {skillsData.map((skill) => (
             <SkillCard
-                key={skill.category}
-                icon={<skill.icon className="w-6 h-6 text-blue-500" />} // Use your color preference
-                skill={skill.category}
-                description={skill.items.join(', ')} // Combine items into a string
+              key={skill.category}
+              icon={<skill.icon className="w-6 h-6 text-blue-500" />}
+              skill={skill.category}
+              description={skill.items.join(', ')}
             />
-            
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     </section>
   );

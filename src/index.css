@@ -28,3 +28,12 @@
     animation-delay: 4s;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding-top: 80px; /* Adjust this based on your header height */
+  margin-top: -80px; /* Same value, negative to pull the section up */
+}

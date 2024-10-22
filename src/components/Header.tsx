@@ -67,6 +67,48 @@
 
 
 
+// import React from 'react';
+// import { Menu, X } from 'lucide-react';
+
+// const Header = () => {
+//   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+//   return (
+//     <header className="bg-white shadow-md sticky top-0 z-50">
+//       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+//         <h1 className="text-2xl font-bold text-indigo-600">Ofgeha</h1>
+//         <nav className="hidden md:flex space-x-8">
+//           <a href="#about" className="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+//           <a href="#skills" className="text-gray-600 hover:text-indigo-600 transition duration-300">Skills</a>
+//           <a href="#projects" className="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a>
+//           <a href="#contact" className="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+//         </nav>
+//         <button
+//           className="md:hidden text-gray-600 hover:text-indigo-600 transition duration-300"
+//           onClick={() => setIsMenuOpen(!isMenuOpen)}
+//           aria-label="Toggle menu"
+//         >
+//           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+//         </button>
+//       </div>
+//       {isMenuOpen && (
+//         <nav className="md:hidden bg-white py-4">
+//           <div className="container mx-auto px-4 flex flex-col space-y-4">
+//             <a href="#about" className="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+//             <a href="#skills" className="text-gray-600 hover:text-indigo-600 transition duration-300">Skills</a>
+//             <a href="#projects" className="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a>
+//             <a href="#contact" className="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+//           </div>
+//         </nav>
+//       )}
+//     </header>
+//   );
+// };
+
+// export default Header;
+
+
+
 import React from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -88,7 +130,7 @@ const Header = () => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMenuOpen ? <X size={24} color="black" /> : <Menu size={24} color="black" />} {/* Set icon color to black */}
         </button>
       </div>
       {isMenuOpen && (
@@ -106,6 +148,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-

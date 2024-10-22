@@ -37,6 +37,8 @@
 import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import myPhoto from "../assets/images/ofge.jpg";
+import myPhoto1 from "../assets/images/ofge1.jpg";
+
 
 const Hero = () => {
   return (
@@ -59,7 +61,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="md:w-1/2">
-          <img src={myPhoto} alt="Jane Doe" className="rounded-full w-64 h-64 object-cover mx-auto" /> {/* Use your photo here */}
+          <img src={myPhoto1} alt="Jane Doe" className="rounded-full w-64 h-64 object-cover mx-auto" /> {/* Use your photo here */}
         </div>
       </div>
     </section>

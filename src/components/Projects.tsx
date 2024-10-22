@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
+import myPhoto from "../assets/images/best1.png";
+import myPhoto1 from "../assets/images/best2.png";
+import myPhoto2 from "../assets/images/best3.png";
+
+
 const projects = [
   {
     id: 1,
     title: 'Customer Churn Prediction',
     description: 'Developed a machine learning model to predict customer churn for a telecom company, improving retention strategies.',
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+    image: myPhoto,
     tags: ['Python', 'Scikit-learn', 'Pandas'],
     liveLink: 'https://example.com/churn-prediction',
     githubLink: 'https://github.com/yourusername/churn-prediction',
@@ -15,7 +20,7 @@ const projects = [
     id: 2,
     title: 'Stock Market Forecasting',
     description: 'Created a time series forecasting model for stock price prediction using LSTM neural networks.',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+    image: myPhoto1,
     tags: ['Python', 'TensorFlow', 'Keras'],
     liveLink: 'https://example.com/stock-forecast',
     githubLink: 'https://github.com/yourusername/stock-forecast',
@@ -24,7 +29,7 @@ const projects = [
     id: 3,
     title: 'COVID-19 Data Dashboard',
     description: 'Built an interactive dashboard for visualizing COVID-19 statistics using Plotly and Dash.',
-    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+    image: myPhoto2,
     tags: ['Python', 'Plotly', 'Dash'],
     liveLink: 'https://example.com/covid-dashboard',
     githubLink: 'https://github.com/yourusername/covid-dashboard',

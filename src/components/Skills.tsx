@@ -229,7 +229,7 @@ const SkillCard: React.FC<{ icon: React.ReactNode; skill: string; description: s
 // Skills Section Component
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="section mb-16"> {/* Added section class */}
+    <section id="skills" className="section mb-16 pt-16"> {/* Added section class */}
       <h2 className="text-3xl font-bold mb-6 text-center">Skills</h2>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

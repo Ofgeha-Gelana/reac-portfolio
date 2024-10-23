@@ -97,7 +97,7 @@ const About = () => {
               When I'm not crunching numbers or building models, you can find me contributing to open-source projects, mentoring aspiring data scientists, or exploring the latest advancements in AI research.
             </p>
             <a 
-              href="/Resume.pdf" 
+              href="/Ofgeha-Gelana-CV.pdf" 
               download
               className="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700"
             >

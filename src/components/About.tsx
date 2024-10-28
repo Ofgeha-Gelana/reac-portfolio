@@ -73,33 +73,82 @@
 // export default About;
 
 
+// import React from 'react';
+// import profileImage from '../assets/images/ofge1.jpg';
+
+// const About = () => {
+//   return (
+//     <section id="about" className="py-20 bg-gradient-to-r from-blue-50 to-white">
+//       <div className="container mx-auto px-4">
+//         <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">About Me</h2>
+//         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center">
+//           <img 
+//             src={profileImage} 
+//             alt="Ofgeha Gelana" 
+//             className="w-40 h-40 rounded-full mb-6 md:mb-0 md:mr-6"
+//           />
+//           <div className="md:ml-8">
+//             <p className="text-lg text-gray-700 mb-6">
+//               I'm a passionate data scientist with 2+ years of experience in machine learning, statistical analysis, and data visualization. My expertise lies in developing AI-driven solutions that solve complex business problems and drive innovation.
+//             </p>
+//             <p className="text-lg text-gray-700 mb-6">
+//               With a BSc. in Computer Science and Engineering from Adama Science and Technology University, I've honed my skills in cutting-edge AI technologies and big data analytics. I'm particularly interested in natural language processing, computer vision, and predictive modeling.
+//             </p>
+//             <p className="text-lg text-gray-700 mb-6">
+//               When I'm not crunching numbers or building models, you can find me contributing to open-source projects, mentoring aspiring data scientists, or exploring the latest advancements in AI research.
+//             </p>
+//             <a 
+//               href="/Ofgeha-Gelana-CV.pdf" 
+//               download
+//               className="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700"
+//             >
+//               View Resume
+//             </a>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default About;
+
+
+
+
+
 import React from 'react';
+import profileImage from '../assets/images/ofge1.jpg';
 
 const About = () => {
   return (
     <section id="about" className="py-20 bg-gradient-to-r from-blue-50 to-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">About Me</h2>
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center">
+        <h2 className="text-4xl font-bold mb-12 text-center text-blue-600">About Me</h2>
+        
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center bg-white shadow-md rounded-lg p-8 md:p-12">
+          {/* Profile Image Styling */}
           <img 
-            src="https://picsum.photos/800" 
-            alt="Your Name" 
-            className="w-40 h-40 rounded-full mb-6 md:mb-0 md:mr-6"
+            src={profileImage} 
+            alt="Ofgeha Gelana" 
+            className="w-48 h-48 rounded-full mb-6 md:mb-0 md:mr-8 border-4 border-blue-100 shadow-lg"
           />
+          
+          {/* Text Content */}
           <div className="md:ml-8">
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               I'm a passionate data scientist with 2+ years of experience in machine learning, statistical analysis, and data visualization. My expertise lies in developing AI-driven solutions that solve complex business problems and drive innovation.
             </p>
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               With a BSc. in Computer Science and Engineering from Adama Science and Technology University, I've honed my skills in cutting-edge AI technologies and big data analytics. I'm particularly interested in natural language processing, computer vision, and predictive modeling.
             </p>
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               When I'm not crunching numbers or building models, you can find me contributing to open-source projects, mentoring aspiring data scientists, or exploring the latest advancements in AI research.
             </p>
             <a 
               href="/Ofgeha-Gelana-CV.pdf" 
               download
-              className="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700"
+              className="inline-block mt-4 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 shadow-lg transition duration-300 ease-in-out"
             >
               View Resume
             </a>

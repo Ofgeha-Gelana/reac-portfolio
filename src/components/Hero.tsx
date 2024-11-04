@@ -150,7 +150,7 @@ const Hero = () => {
 
         <div className="flex justify-center space-x-8 mb-8">
           <a 
-            href="https://github.com" 
+            href="https://github.com/Ofgeha-Gelana" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-white hover:text-blue-300 transition duration-300"
@@ -158,7 +158,7 @@ const Hero = () => {
             <Github size={30} />
           </a>
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/in/ofgeha-gelana/" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-white hover:text-blue-300 transition duration-300"

@@ -150,12 +150,12 @@ const Contact = () => {
   const socialLinks = [
     {
       icon: Github,
-      href: 'https://github.com/ofgeha',
+      href: 'https://github.com/Ofgeha-Gelana?tab=repositories',
       label: 'GitHub'
     },
     {
       icon: Linkedin,
-      href: 'https://linkedin.com/in/ofgeha',
+      href: 'https://www.linkedin.com/in/ofgeha-gelana/',
       label: 'LinkedIn'
     }
   ];

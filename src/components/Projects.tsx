@@ -1,29 +1,30 @@
 import React, { useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
-import myPhoto from "../assets/images/best1.png";
-import myPhoto1 from "../assets/images/best2.png";
+import myPhoto from "../assets/images/nova.png";
+import myPhoto1 from "../assets/images/sun.png";
 import myPhoto2 from "../assets/images/best3.png";
-
+import myPhoto3 from "../assets/images/mexico 2.png";
 
 const projects = [
   {
+    
     id: 1,
-    title: 'Customer Churn Prediction',
-    description: 'Developed a machine learning model to predict customer churn for a telecom company, improving retention strategies.',
+    title: 'Financial News Sentiment and Stock Movements',
+    description: 'Explored the correlation between financial news sentiment and stock prices using NLP, boosting Nova Financial’s predictive analytics.',
     image: myPhoto,
     tags: ['Python', 'Scikit-learn', 'Pandas'],
     liveLink: 'https://example.com/churn-prediction',
-    githubLink: 'https://github.com/yourusername/churn-prediction',
+    githubLink: 'https://github.com/Ofgeha-Gelana/Nova-Financial-Solution/tree/main',
   },
   {
     id: 2,
-    title: 'Stock Market Forecasting',
-    description: 'Created a time series forecasting model for stock price prediction using LSTM neural networks.',
+    title: 'Solar Radiation Data Dashboard',
+    description: 'Built an interactive Streamlit dashboard to visualize and analyze solar radiation and environmental data, including temperature and wind speed.',
     image: myPhoto1,
-    tags: ['Python', 'TensorFlow', 'Keras'],
+    tags: ['Data Visualization', 'Streamlit', 'Python'],
     liveLink: 'https://example.com/stock-forecast',
-    githubLink: 'https://github.com/yourusername/stock-forecast',
+    githubLink: 'https://github.com/Ofgeha-Gelana/MoonLight-Energy-Solutions',
   },
   {
     id: 3,
@@ -32,8 +33,21 @@ const projects = [
     image: myPhoto2,
     tags: ['Python', 'Plotly', 'Dash'],
     liveLink: 'https://example.com/covid-dashboard',
-    githubLink: 'https://github.com/yourusername/covid-dashboard',
+    githubLink: 'https://github.com/Ofgeha-Gelana/rossmann-sales-prediction-ml',
   },
+
+  {
+
+    id: 4,
+    title: 'Determinants of Housing Prices in Mexico',
+    description: 'Analyzed 21,000+ properties in Mexico to assess if location or size more strongly affects sale prices, using geospatial analysis and regression.',
+    image: myPhoto3, // Add relevant image
+    tags: ['Data Analysis', 'Python', 'Statistics', 'Visualization'],
+    liveLink: 'https://example.com/mexico-housing-prices', // Replace with actual link if available
+    githubLink: 'https://github.com/Ofgeha-Gelana/Housing-in-Mexico', // Replace with actual GitHub link
+    
+  }
+  
 ];
 
 const Projects: React.FC = () => {

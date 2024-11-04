@@ -117,41 +117,119 @@
 
 
 
+// import React from 'react';
+// import profileImage from '../assets/images/ofge1.jpg';
+
+// const About = () => {
+//   return (
+//     <section id="about" className="py-20 bg-gradient-to-r from-blue-50 to-white">
+//       <div className="container mx-auto px-4">
+//         <h2 className="text-4xl font-bold mb-12 text-center text-blue-600">About Me</h2>
+        
+//         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center bg-white shadow-md rounded-lg p-8 md:p-12">
+//           {/* Profile Image Styling */}
+//           <img 
+//             src={profileImage} 
+//             alt="Ofgeha Gelana" 
+//             className="w-48 h-48 rounded-full mb-6 md:mb-0 md:mr-8 border-4 border-blue-100 shadow-lg"
+//           />
+          
+//           {/* Text Content */}
+//           <div className="md:ml-8">
+//             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+//               I'm a passionate data scientist with 2+ years of experience in machine learning, statistical analysis, and data visualization. My expertise lies in developing AI-driven solutions that solve complex business problems and drive innovation.
+//             </p>
+//             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+//               With a BSc. in Computer Science and Engineering from Adama Science and Technology University, I've honed my skills in cutting-edge AI technologies and big data analytics. I'm particularly interested in natural language processing, computer vision, and predictive modeling.
+//             </p>
+//             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+//               When I'm not crunching numbers or building models, you can find me contributing to open-source projects, mentoring aspiring data scientists, or exploring the latest advancements in AI research.
+//             </p>
+//             <a 
+//               href="/Ofgeha-Gelana-CV.pdf" 
+//               download
+//               className="inline-block mt-4 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 shadow-lg transition duration-300 ease-in-out"
+//             >
+//               View Resume
+//             </a>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default About;
+
+
+
+
 import React from 'react';
 import profileImage from '../assets/images/ofge1.jpg';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-to-r from-blue-50 to-white">
+    <section id="about" className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center text-blue-600">About Me</h2>
+        <div className="flex flex-col items-center mb-16">
+          <h2 className="text-5xl font-bold text-blue-600 mb-4">About Me</h2>
+          <div className="w-24 h-1 bg-blue-600 rounded-full"></div>
+        </div>
         
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center bg-white shadow-md rounded-lg p-8 md:p-12">
-          {/* Profile Image Styling */}
-          <img 
-            src={profileImage} 
-            alt="Ofgeha Gelana" 
-            className="w-48 h-48 rounded-full mb-6 md:mb-0 md:mr-8 border-4 border-blue-100 shadow-lg"
-          />
-          
-          {/* Text Content */}
-          <div className="md:ml-8">
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              I'm a passionate data scientist with 2+ years of experience in machine learning, statistical analysis, and data visualization. My expertise lies in developing AI-driven solutions that solve complex business problems and drive innovation.
-            </p>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              With a BSc. in Computer Science and Engineering from Adama Science and Technology University, I've honed my skills in cutting-edge AI technologies and big data analytics. I'm particularly interested in natural language processing, computer vision, and predictive modeling.
-            </p>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              When I'm not crunching numbers or building models, you can find me contributing to open-source projects, mentoring aspiring data scientists, or exploring the latest advancements in AI research.
-            </p>
-            <a 
-              href="/Ofgeha-Gelana-CV.pdf" 
-              download
-              className="inline-block mt-4 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 shadow-lg transition duration-300 ease-in-out"
-            >
-              View Resume
-            </a>
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition-transform duration-300">
+            <div className="flex flex-col md:flex-row items-center p-8 md:p-12 gap-12">
+              <div className="md:w-1/3 flex flex-col items-center">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-blue-600 rounded-full blur-lg opacity-20"></div>
+                  <img 
+                    src={profileImage} 
+                    alt="Ofgeha Gelana" 
+                    className="w-64 h-64 rounded-full relative z-10 border-4 border-white shadow-2xl object-cover"
+                  />
+                </div>
+                <a 
+                  href="/Ofgeha-Gelana-CV.pdf" 
+                  download
+                  className="group relative mt-8 inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 shadow-lg transition-all duration-300 ease-in-out hover:shadow-blue-200 hover:shadow-xl"
+                >
+                  <span>Download CV</span>
+                  <svg 
+                    className="w-5 h-5 group-hover:translate-x-1 transition-transform" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                  </svg>
+                </a>
+              </div>
+              
+              <div className="md:w-2/3 space-y-6">
+                <div className="space-y-6 text-gray-700">
+                  <p className="text-xl leading-relaxed">
+                    I'm a passionate data scientist with 2+ years of experience in machine learning, statistical analysis, and data visualization. My expertise lies in developing AI-driven solutions that solve complex business problems and drive innovation.
+                  </p>
+                  <p className="text-xl leading-relaxed">
+                    With a BSc. in Computer Science and Engineering from Adama Science and Technology University, I've honed my skills in cutting-edge AI technologies and big data analytics. I'm particularly interested in natural language processing, computer vision, and predictive modeling.
+                  </p>
+                  <p className="text-xl leading-relaxed">
+                    When I'm not crunching numbers or building models, you can find me contributing to open-source projects, mentoring aspiring data scientists, or exploring the latest advancements in AI research.
+                  </p>
+                </div>
+                
+                <div className="flex flex-wrap gap-4 pt-6">
+                  {['Machine Learning', 'Data Analysis', 'AI', 'Python', 'Deep Learning'].map((skill) => (
+                    <span 
+                      key={skill}
+                      className="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

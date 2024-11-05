@@ -123,6 +123,75 @@
 
 
 
+// import React from 'react';
+// import { Github, Linkedin, Mail } from 'lucide-react';
+// import myPhoto1 from "../assets/images/ds.jpg"; // Path to your background photo
+
+// const Hero = () => {
+//   return (
+//     <section
+//       className="relative bg-cover bg-center text-white py-20"
+//       style={{
+//         backgroundImage: `url(${myPhoto1})`,
+//         backgroundSize: 'cover',
+//         backgroundPosition: 'center',
+//       }}
+//     >
+//       <div className="absolute inset-0 bg-black bg-opacity-70"></div> {/* Dark overlay for better text visibility */}
+
+//       <div className="container mx-auto px-4 flex flex-col items-center justify-center relative z-10">
+//         <div className="text-center mb-12">
+//           <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-wide">Ofgeha Gelana</h1>
+//           <h2 className="text-3xl md:text-4xl font-semibold mb-6">Data Scientist & AI Enthusiast</h2>
+//           <p className="text-lg md:text-xl mb-8 leading-relaxed">
+//             Transforming data into actionable insights and innovative AI solutions.
+//           </p>
+//         </div>
+
+//         <div className="flex justify-center space-x-8 mb-8">
+//           <a 
+//             href="https://github.com/Ofgeha-Gelana" 
+//             target="_blank" 
+//             rel="noopener noreferrer" 
+//             className="text-white hover:text-blue-300 transition duration-300"
+//           >
+//             <Github size={30} />
+//           </a>
+//           <a 
+//             href="https://www.linkedin.com/in/ofgeha-gelana/" 
+//             target="_blank" 
+//             rel="noopener noreferrer" 
+//             className="text-white hover:text-blue-300 transition duration-300"
+//           >
+//             <Linkedin size={30} />
+//           </a>
+//           <a 
+//             href="mailto:jane@example.com" 
+//             className="text-white hover:text-blue-300 transition duration-300"
+//           >
+//             <Mail size={30} />
+//           </a>
+//         </div>
+
+//         <div className="mt-8">
+//           <img 
+//             src={myPhoto1} 
+//             alt="Profile of Ofgeha Gelana" 
+//             className="rounded-full w-32 h-32 border-4 border-white object-cover shadow-lg"
+//           />
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Hero;
+
+
+
+
+
+
 import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import myPhoto1 from "../assets/images/ds.jpg"; // Path to your background photo
@@ -130,56 +199,65 @@ import myPhoto1 from "../assets/images/ds.jpg"; // Path to your background photo
 const Hero = () => {
   return (
     <section
-      className="relative bg-cover bg-center text-white py-20"
+      className="relative bg-cover bg-center text-white py-32 lg:py-48"
       style={{
         backgroundImage: `url(${myPhoto1})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-70"></div> {/* Dark overlay for better text visibility */}
+      {/* Dark overlay for better text visibility */}
+      <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
-      <div className="container mx-auto px-4 flex flex-col items-center justify-center relative z-10">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-wide">Ofgeha Gelana</h1>
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">Data Scientist & AI Enthusiast</h2>
-          <p className="text-lg md:text-xl mb-8 leading-relaxed">
-            Transforming data into actionable insights and innovative AI solutions.
-          </p>
-        </div>
+      <div className="container mx-auto px-6 lg:px-12 flex flex-col items-center justify-center relative z-10 text-center">
+        <img 
+          src={myPhoto1} 
+          alt="Profile of Ofgeha Gelana" 
+          className="rounded-full w-32 h-32 lg:w-40 lg:h-40 border-4 border-white shadow-lg mb-6 lg:mb-8"
+        />
+        
+        <h1 className="text-4xl lg:text-6xl font-extrabold tracking-wider mb-2 lg:mb-4">
+          Ofgeha Gelana
+        </h1>
+        <h2 className="text-2xl lg:text-3xl font-semibold mb-4 lg:mb-6">
+          Data Scientist & AI Enthusiast
+        </h2>
+        
+        <p className="text-lg lg:text-xl font-light mb-8 lg:mb-12 max-w-2xl leading-relaxed">
+          Transforming data into actionable insights and driving innovation with AI solutions.
+        </p>
 
-        <div className="flex justify-center space-x-8 mb-8">
+        <div className="flex justify-center space-x-6 lg:space-x-10 mb-8 lg:mb-12">
           <a 
             href="https://github.com/Ofgeha-Gelana" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-white hover:text-blue-300 transition duration-300"
+            className="text-white hover:text-blue-400 transition duration-300 transform hover:scale-110"
           >
-            <Github size={30} />
+            <Github size={32} />
           </a>
           <a 
             href="https://www.linkedin.com/in/ofgeha-gelana/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-white hover:text-blue-300 transition duration-300"
+            className="text-white hover:text-blue-400 transition duration-300 transform hover:scale-110"
           >
-            <Linkedin size={30} />
+            <Linkedin size={32} />
           </a>
           <a 
             href="mailto:jane@example.com" 
-            className="text-white hover:text-blue-300 transition duration-300"
+            className="text-white hover:text-blue-400 transition duration-300 transform hover:scale-110"
           >
-            <Mail size={30} />
+            <Mail size={32} />
           </a>
         </div>
 
-        <div className="mt-8">
-          <img 
-            src={myPhoto1} 
-            alt="Profile of Ofgeha Gelana" 
-            className="rounded-full w-32 h-32 border-4 border-white object-cover shadow-lg"
-          />
-        </div>
+        <a
+          href="#projects"
+          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 lg:py-3 lg:px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105"
+        >
+          View My Projects
+        </a>
       </div>
     </section>
   );

@@ -119,31 +119,27 @@
 // export default Contact;
 
 
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
+import React from 'react';
+import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink } from 'lucide-react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
   const contactDetails = [
     {
       icon: Mail,
       text: 'ofgehagelana@gmail.com',
-      href: 'mailto:ofgehagelana@gmail.com'
+      href: 'mailto:ofgehagelana@gmail.com',
+      label: 'Email'
     },
     {
       icon: Phone,
       text: '+2519 (35) 070773',
-      href: 'tel:+251935070773'
+      href: 'tel:+251935070773',
+      label: 'Phone'
     },
     {
       icon: MapPin,
       text: 'Addis Ababa, Ethiopia',
-      href: null
+      label: 'Location'
     }
   ];
 
@@ -151,141 +147,86 @@ const Contact = () => {
     {
       icon: Github,
       href: 'https://github.com/Ofgeha-Gelana?tab=repositories',
-      label: 'GitHub'
+      label: 'GitHub',
+      color: 'hover:bg-gray-700'
     },
     {
       icon: Linkedin,
       href: 'https://www.linkedin.com/in/ofgeha-gelana/',
-      label: 'LinkedIn'
+      label: 'LinkedIn',
+      color: 'hover:bg-blue-700'
     }
   ];
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   return (
-    <section id="contact" className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
+    <section id="contact" className="py-24 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center mb-16">
-          <h2 className="text-5xl font-bold text-blue-600 mb-4">Get in Touch</h2>
-          <div className="w-24 h-1 bg-blue-600 rounded-full"></div>
-          <p className="mt-6 text-xl text-gray-600 text-center max-w-3xl">
-            Let's connect and discuss how we can work together on your next data science project
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6">
+            Let's Connect
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Feel free to reach out for collaborations or just a friendly hello
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="flex flex-col lg:flex-row">
-              {/* Contact Form */}
-              <div className="lg:w-2/3 p-8 lg:p-12">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Your Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={6}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
-                      required
-                    ></textarea>
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transform hover:scale-[1.02] transition-all duration-200 font-medium"
-                  >
-                    Send Message
-                  </button>
-                </form>
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Contact Information */}
+              <div className="space-y-8">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">Contact Details</h3>
+                <div className="space-y-6">
+                  {contactDetails.map((detail, index) => (
+                    <div key={index} className="group flex items-center space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-all duration-300">
+                      <div className="p-3 bg-indigo-100 rounded-lg group-hover:bg-indigo-200 transition-colors duration-300">
+                        <detail.icon className="w-6 h-6 text-indigo-600" />
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500 mb-1">{detail.label}</p>
+                        {detail.href ? (
+                          <a 
+                            href={detail.href}
+                            className="text-gray-800 hover:text-indigo-600 font-medium transition-colors duration-300 flex items-center"
+                          >
+                            {detail.text}
+                            <ExternalLink className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                          </a>
+                        ) : (
+                          <span className="text-gray-800 font-medium">{detail.text}</span>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              {/* Contact Information */}
-              <div className="lg:w-1/3 bg-blue-50 p-8 lg:p-12">
-                <div className="space-y-8">
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-4">Contact Information</h3>
-                    <div className="space-y-4">
-                      {contactDetails.map((detail, index) => (
-                        <div key={index} className="flex items-center space-x-3">
-                          <detail.icon className="w-5 h-5 text-blue-600" />
-                          {detail.href ? (
-                            <a 
-                              href={detail.href}
-                              className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
-                            >
-                              {detail.text}
-                            </a>
-                          ) : (
-                            <span className="text-gray-600">{detail.text}</span>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+              {/* Social Links */}
+              <div className="space-y-8">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">Social Profiles</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center space-x-3 p-4 rounded-lg bg-gray-50 hover:bg-indigo-600 group transition-all duration-300 ${social.color}`}
+                    >
+                      <div className="p-2 bg-white rounded-lg group-hover:bg-opacity-10 transition-colors duration-300">
+                        <social.icon className="w-6 h-6 text-indigo-600 group-hover:text-white transition-colors duration-300" />
+                      </div>
+                      <span className="font-medium text-gray-800 group-hover:text-white transition-colors duration-300">
+                        {social.label}
+                      </span>
+                    </a>
+                  ))}
+                </div>
 
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-4">Connect With Me</h3>
-                    <div className="flex space-x-4">
-                      {socialLinks.map((social, index) => (
-                        <a
-                          key={index}
-                          href={social.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 bg-white rounded-lg hover:bg-blue-100 transition-colors duration-200"
-                          aria-label={social.label}
-                        >
-                          <social.icon className="w-6 h-6 text-blue-600" />
-                        </a>
-                      ))}
-                    </div>
-                  </div>
+                <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-lg mt-8">
+                  <p className="text-gray-600 text-center">
+                    Available for data science projects and collaborations
+                  </p>
                 </div>
               </div>
             </div>

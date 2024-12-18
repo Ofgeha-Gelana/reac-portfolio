@@ -1,0 +1,48 @@
+name: Deploy React App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Build the React app
+      - name: Build React app
+        run: npm run build
+
+      # Step 5: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.OFGEHA }}
+          publish_dir: ./build
+
+  gitio:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      # Step 1: Create a short URL using git.io (manual setup required)
+      - name: Create git.io short link
+        run: |
+          echo "You can create a git.io short link manually using the GitHub Pages URL:"
+          echo "GitHub Pages URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          echo "Visit https://git.io and paste the URL to generate a custom short link."

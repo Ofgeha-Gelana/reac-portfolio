@@ -111,221 +111,62 @@
 
 
 
-// import React, { useState, useEffect } from 'react';
-// import { Menu, X, ChevronRight } from 'lucide-react';
-
-// const Header = () => {
-//   const [isMenuOpen, setIsMenuOpen] = useState(false);
-//   const [scrolled, setScrolled] = useState(false);
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       setScrolled(window.scrollY > 20);
-//     };
-//     window.addEventListener('scroll', handleScroll);
-//     return () => window.removeEventListener('scroll', handleScroll);
-//   }, []);
-
-//   return (
-//     <header 
-//       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-//         scrolled 
-//           ? 'bg-white/80 backdrop-blur-md shadow-lg' 
-//           : 'bg-transparent'
-//       }`}
-//     >
-//       <div className="container mx-auto px-6 py-4">
-//         <div className="flex items-center justify-between">
-//           {/* Logo */}
-//           <a 
-//             href="#" 
-//             className="relative group"
-//           >
-//             <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-//               Ofgeha
-//             </span>
-//             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 transition-all group-hover:w-full"></span>
-//           </a>
-
-//           {/* Desktop Navigation */}
-//           <nav className="hidden md:flex items-center space-x-1">
-//             {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
-//               <a
-//                 key={item}
-//                 href={`#${item.toLowerCase()}`}
-//                 className="relative px-4 py-2 text-gray-700 hover:text-indigo-600 transition-colors group"
-//               >
-//                 <span className="relative z-10">{item}</span>
-//                 <span className="absolute inset-0 w-full h-full bg-indigo-50 rounded-lg scale-0 group-hover:scale-100 transition-transform"></span>
-//               </a>
-//             ))}
-//             <a
-//               href="#contact"
-//               className="ml-4 px-6 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 flex items-center group"
-//             >
-//               Let's Talk
-//               <ChevronRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
-//             </a>
-//           </nav>
-
-//           {/* Mobile Menu Button */}
-//           <button
-//             onClick={() => setIsMenuOpen(!isMenuOpen)}
-//             className="md:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors"
-//             aria-label="Toggle menu"
-//           >
-//             {isMenuOpen ? (
-//               <X className="w-6 h-6 text-gray-900 transition-all" />
-//             ) : (
-//               <Menu className="w-6 h-6 text-gray-900 transition-all" />
-//             )}
-//           </button>
-//         </div>
-
-//         {/* Mobile Navigation */}
-//         <div
-//           className={`fixed inset-0 bg-white/90 backdrop-blur-lg transition-transform duration-300 md:hidden ${
-//             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-//           }`}
-//         >
-//           <nav className="flex flex-col items-center justify-center h-full space-y-8">
-//             {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
-//               <a
-//                 key={item}
-//                 href={`#${item.toLowerCase()}`}
-//                 onClick={() => setIsMenuOpen(false)}
-//                 className="text-xl font-medium text-gray-900 hover:text-indigo-600 transition-colors"
-//               >
-//                 {item}
-//               </a>
-//             ))}
-//             <a
-//               href="#contact"
-//               onClick={() => setIsMenuOpen(false)}
-//               className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
-//             >
-//               Let's Talk
-//             </a>
-//           </nav>
-//         </div>
-//       </div>
-//     </header>
-//   );
-// };
-
-// export default Header;
 
 
 
-
-
-
-
-
-
-import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronRight } from 'lucide-react';
+import React from "react";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <header 
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-white/80 backdrop-blur-md shadow-lg' 
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a 
-            href="#" 
-            className="relative group z-50"
-          >
-            <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Ofgeha
-            </span>
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 transition-all group-hover:w-full"></span>
-          </a>
+    <header className="bg-gradient-to-r from-indigo-600 to-blue-500 shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo Section */}
+        <h1 className="text-3xl font-extrabold text-white tracking-tight">
+          Ofgeha
+        </h1>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
-            {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="relative px-4 py-2 text-gray-700 hover:text-indigo-600 transition-colors group"
-              >
-                <span className="relative z-10">{item}</span>
-                <span className="absolute inset-0 w-full h-full bg-indigo-50 rounded-lg scale-0 group-hover:scale-100 transition-transform"></span>
-              </a>
-            ))}
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex space-x-8">
+          {["About", "Skills", "Projects", "Contact"].map((item) => (
             <a
-              href="#contact"
-              className="ml-4 px-6 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 flex items-center group"
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="text-white font-medium hover:text-yellow-300 transition duration-300"
             >
-              Let's Talk
-              <ChevronRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
+              {item}
             </a>
-          </nav>
+          ))}
+        </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100/50 transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? (
-              <X className="w-6 h-6 text-gray-900 transition-all" />
-            ) : (
-              <Menu className="w-6 h-6 text-gray-900 transition-all" />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        <div
-          className={`fixed inset-0 bg-gradient-to-b from-white via-white to-indigo-50/95 transition-transform duration-300 md:hidden ${
-            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
-          style={{
-            backdropFilter: 'blur(16px)',
-            WebkitBackdropFilter: 'blur(16px)'
-          }}
+        {/* Mobile Menu Toggle */}
+        <button
+          className="md:hidden text-white focus:outline-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
         >
-          <nav className="flex flex-col items-center justify-center min-h-screen space-y-8 px-6">
-            {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
+          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Mobile Navigation */}
+      {isMenuOpen && (
+        <nav className="md:hidden bg-white shadow-lg rounded-b-lg">
+          <div className="container mx-auto px-6 py-4 flex flex-col space-y-4">
+            {["About", "Skills", "Projects", "Contact"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                onClick={() => setIsMenuOpen(false)}
-                className="text-xl font-medium text-gray-900 hover:text-indigo-600 transition-colors relative group"
+                className="text-gray-700 font-medium hover:text-indigo-600 transition duration-300"
               >
                 {item}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
-            <a
-              href="#contact"
-              onClick={() => setIsMenuOpen(false)}
-              className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
-            >
-              Let's Talk
-            </a>
-          </nav>
-        </div>
-      </div>
+          </div>
+        </nav>
+      )}
     </header>
   );
 };
